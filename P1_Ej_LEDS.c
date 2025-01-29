@@ -1,6 +1,6 @@
 /*
  * File:   Ej_LEDS.c
- * Author: José Pardiñaz
+ * Author: JosÃ© PardiÃ±az
  *
  * Created on 21 de enero de 2025, 12:11 PM
  */
@@ -175,7 +175,7 @@ for(int i = 3; i >= 0; i = i--){
 
 void efecto7(){
 unsigned char snake[4] = {0x01, 0x03, 0x07, 0x0F}; // Etapas de entrada de la serpiente
-    unsigned char mask = 0xFF; // Máscara para limitar a 8 bits
+    unsigned char mask = 0xFF; // MÃ¡scara para limitar a 8 bits
     
     while (1) {
         // Fase 1: Entrada de la serpiente
