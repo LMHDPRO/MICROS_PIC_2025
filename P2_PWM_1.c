@@ -10,7 +10,7 @@
 
 #include <xc.h>
 
-// Configuraci髇 del microcontrolador
+// Configuraci贸n del microcontrolador
 #pragma config FOSC = INTOSCIO_EC
 #pragma config WDT = OFF
 #pragma config PBADEN = OFF
@@ -23,13 +23,13 @@ void Set_PWM_DutyCycle(unsigned int duty);
 
 void main(void) {
     unsigned char duty = 0; // Duty cycle inicial (0%)
-    char direction = 1;     // Direcci髇 del cambio (1 = subir, -1 = bajar)
+    char direction = 1;     // Direcci贸n del cambio (1 = subir, -1 = bajar)
 
     // Configurar PWM
     PWM_Init();
     // Configurar PORTD como salida para los segmentos
     TRISD = 0x00; // PORTD como salida
-    PORTD = 0x3F; // Mostrar '0' en display 醤odo com鷑
+    PORTD = 0x3F; // Mostrar '0' en display 谩nodo com煤n
 
     // Configurar RC0 como salida para el transistor NPN
     TRISCbits.TRISC0 = 0; // RC0 como salida
@@ -40,10 +40,10 @@ void main(void) {
         
         __delay_ms(200); // Retardo de 200ms
 
-        // Cambiar duty cycle en un 10% en la direcci髇 actual
+        // Cambiar duty cycle en un 10% en la direcci贸n actual
         duty += (10 * direction);
 
-        // Cambiar direcci髇 al llegar a 0% o 100%
+        // Cambiar direcci贸n al llegar a 0% o 100%
         if (duty >= 100) {
             direction = -1;
             duty = 100;
