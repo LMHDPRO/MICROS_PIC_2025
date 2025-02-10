@@ -148,7 +148,7 @@ void setDC1(int x){
     if(x > 100){
         x = 100;
     }
-    //calcula el valor a cargar despejando la fórmula
+    //calcula el valor a cargar despejando la fÃ³rmula
     //los valores de prescalador a 16 y Osc =8MHz son fijos
     int val = x*10;
     CCPR1L = (val - val%4)/4;  //8 bits altos
